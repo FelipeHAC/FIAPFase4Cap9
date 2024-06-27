@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Financeira</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Cabeçalho superior -->
+<div class="header bg-light py-2 px-3 mb-3">
+    <div class="d-flex align-items-center justify-content-between">
+        <div class="icon-circle text-center text-secondary">
+            <span>FC</span>
+        </div>
+        <div class="search-bar d-flex align-items-center flex-grow-1 mx-2 position-relative">
+            <input type="text" class="form-control rounded-pill text-center" placeholder="Buscar">
+            <i class="fa fa-search position-absolute search-icon"></i>
+        </div>
+        <div class="icon-circle text-center text-secondary">
+            <img src="https://cdn-icons-png.flaticon.com/512/77/77696.png" alt="Mensagem" class="icon-small">
+        </div>
+    </div>
+</div>
+
+<!-- Container principal -->
+<div class="container mt-4">
+
+    <!-- Saldo Total -->
+    <div class="card text-white bg-primary mb-3">
+        <div class="card-body d-flex flex-column align-items-center">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="card-title"><i class="fa fa-dollar-sign mr-2"></i> Saldo Total</h5>
+                    <p class="card-text" id="saldo">R$ 33.945,34</p>
+                    <p class="small">Seu dinheiro está rendendo 1% ao mês.</p>
+                </div>
+                <!-- Ícone de olho -->
+                <i id="eye-icon" class="fa fa-eye" onclick="toggleSaldo()"></i>
+            </div>
+            <a href="#" class="btn btn-light rounded mt-3">SEUS INVESTIMENTOS</a>
+        </div>
+    </div>
+
+    <!-- Criptomoedas -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title"><img src="https://public.bnbstatic.com/20190405/eb2349c3-b2f8-4a93-a286-8f86a62ea9d8.png" alt="Ícone de Criptomoedas" class="icon-medium mr-2"> Criptomoedas</h5>
+            <div class="d-flex flex-column mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>BTC</span>
+                    <span class="ml-auto">0.019</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>SOL</span>
+                    <span class="ml-auto">3.735</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>RNDR</span>
+                    <span class="ml-auto">51.84</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Renda Fixa -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title"><img src="https://play-lh.googleusercontent.com/0j6--RjOpm3uzR4GMCDK23w7X2wo2ePDzVy3wiYufzW_smS1smgldQ1aG3WQlhD2dMk" alt="Ícone de Renda Fixa" class="icon-medium mr-2"> Renda Fixa</h5>
+            <div class="d-flex flex-column mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>CDB NEON</span>
+                    <span class="ml-auto">R$ 851,00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>LCI BRB</span>
+                    <span class="ml-auto">R$ 560,89</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>CDB VOITER</span>
+                    <span class="ml-auto">R$ 470,45</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fundos Imobiliários -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8DtLIAGC28NNOfJ6KGH6WwxrmlyVRmkF2A&s" alt="Ícone de Fundos Imobiliários" class="icon-medium mr-2"> Fundos Imobiliários</h5>
+            <div class="d-flex flex-column mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>BTLG11</span>
+                    <span class="ml-auto">R$ 2.030,78</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>XPML11</span>
+                    <span class="ml-auto">R$ 1.546,79</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Barra inferior -->
+<div class="footer d-flex justify-content-between align-items-center bg-light py-2 px-3 fixed-bottom">
+    <img src="https://cdn-icons-png.flaticon.com/512/62/62128.png" alt="Arquivos Icon" class="icon-small">
+    <img src="https://cdn.icon-icons.com/icons2/909/PNG/512/pie-chart_icon-icons.com_70894.png" alt="Gráfico de Pizza Icon" class="icon-small">
+    <div class="icon-circle text-center text-secondary">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Casa Icon" class="icon-small">
+    </div>
+    <img src="https://thumbs.dreamstime.com/b/%C3%ADcone-branco-do-sinal-bitcoin-no-fundo-preto-moeda-cripto-102991544.jpg" alt="Bitcoin Icon" class="icon-small">
+    <img src="https://cdn-icons-png.flaticon.com/512/21/21012.png" alt="Banco Icon" class="icon-small">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+    function toggleSaldo() {
+        const saldo = document.getElementById('saldo');
+        const eyeIcon = document.getElementById('eye-icon');
+        if (saldo.style.display === 'none') {
+            saldo.style.display = 'block';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        } else {
+            saldo.style.display = 'none';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        }
+    }
+</script>
+
+</body>
+</html>
